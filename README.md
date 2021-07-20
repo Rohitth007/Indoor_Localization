@@ -32,5 +32,5 @@ in a new location.
 ## Android App
 <img src='https://user-images.githubusercontent.com/64144419/126339944-15344624-19af-4d6b-9593-7fc2dc487c9d.png' width=200>
 
-For more details on each of these, checkout the main Report and README's in each of the folders.
+For more details on each of these, checkout the main [Report](./Indoor_Localization_CS6650_Report.pdf) and README's in each of the folders.
 
