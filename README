@@ -1,71 +1,25 @@
-README ________________________________________________________________________
-_______________________________________________________________________________
+# Indoor Localization
 
-kalman.py _____________________________________________________________________
+This project explores Indoor Localization with **Sensor Fusion** of **PDR** (Pedestrian Dead Reckoning) and a **Single RTT**
+(Round Trip Time) **Wi-Fi** with **known initial position**, the implementation of which deals with **IMU**
+measurements, **Complementary Filters** and **Kalman Filters**.
 
-Contains the implementation of Kalman Filter and API functions useful for
-running the filter easily like kalman_init_line(), pdr(), pdr_with_rtt(), etc.
-_______________________________________________________________________________
+It is a project on Indoor Localization without using trilaterization and using as
+less dependencies as possible ( Range information from 1 AP and 1 IMU ). Since
+a single range equation would give many solutions the location of the starting
+point is assumed as known. This can be a valid assumption in many cases.
 
-rtt.py ________________________________________________________________________
+## Application Examples
 
-Contains code for simulating RTT with Gaussian Noise and function to find
-coordinate if range and estimated location is given by projecting point onto
-circle.
-_______________________________________________________________________________
+### Supermarket Cart Location Analysis
 
-step_len_error.py _____________________________________________________________
+The problem is to track the Carts in supermarkets so that we can gather
+information about what consumers are doing the data obtained can then be
+used in Data Analysis and Machine Learning Models to gather useful
+information.
 
-Finds bias and variance in step length and step detect.
+### Localization for the Visually Impaired in Public Places
 
-How to run: 'python3 step_len_error.py' in terminal
-
-Output:
-	Errors in each step length calculated
-	Mean: x.xxx
-	Std: x.xxx
-	<Shows CDF-PDF plot>
-
-	Error in step length combined with step detection
-	Mean: x.xxx
-	Std: x.xxx
-	<Shows CDF-PDF plot>
-_______________________________________________________________________________
-
-orientation_error.py __________________________________________________________
-
-Finds bias and variance in orientation.
-
-How to run: 'python3 orientation_error.py' in terminal
-
-Output:
-	Mean: x.xxx
-	Std: x.xxx
-_______________________________________________________________________________
-
-simulate.py ___________________________________________________________________
-
-Contains code related to simulating walking on line and circle with functions
-sim_line() and sim_circle().
-_______________________________________________________________________________
-
-localization_error.py _________________________________________________________
-
-Contains code for post analysis using analyse_line() and analyse_circle().
-Calls the walking simulation function.
-
-How to run: 'python3 localization_error.py' in terminal
-
-Output:
-	Line Simulation
-	Mean: x.xxx
-	Max: x.xxx
-	<Shows scatter plot>
-	
-	Circle Simulation
-	Mean: x.xxx
-	Max: x.xxx
-	<Shows scatter plot>
-_______________________________________________________________________________
-_______________________________________________________________________________	
-
+Here the problem is to track the location of Visually Impaired person, so that
+directions can be given to them using a speech assistant when they find themselves
+in a new location.
